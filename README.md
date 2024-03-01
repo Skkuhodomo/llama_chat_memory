@@ -1,10 +1,9 @@
 # Chat with memorable LLAMA (Local)
 ##### Memory-capable Ollama available for use both locally and on the web! 
 ## Sequence
-
 <center>
 
-![class-diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Skkuhodomo/llama_chat_memory/main/sequence.puml)
+![class-diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Skkuhodomo/llama_chat_memory/main/sequence.puml) |
 
 </center>
 
