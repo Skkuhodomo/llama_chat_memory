@@ -1,0 +1,30 @@
+@startuml llama
+box #LightBlue
+actor "User" #White
+end box
+
+box Streamlit #LightYellow
+participant "Web" #Yellow
+end box
+box LLM #LightGreen
+participant "API" 
+end box
+
+
+loop CHAT
+autonumber
+activate User 
+User -> Web : Type message
+activate Web 
+Web -> API : Send message with context
+activate API 
+API -> API : Generate message
+API --> Web : Return message
+deactivate API
+Web -> Web : Store message in session(context)
+Web --> User : Display message
+deactivate Web
+end
+
+
+@enduml
