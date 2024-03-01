@@ -1,5 +1,5 @@
 # Chat with memorable LLAMA (Local)
-##### Memory-capable Ollama available for use both locally and on the web! 
+##### Memory-capable Ollama available for use  locally and on the web! 
 ## Sequence
 <center>
 
