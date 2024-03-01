@@ -41,7 +41,7 @@ streamlit run app.py
 ```
 
 ## Example 
-
+<img src = "example.png"/>
 
 
 
