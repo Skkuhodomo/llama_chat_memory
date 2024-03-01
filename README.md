@@ -32,7 +32,6 @@ git clone https://github.com/Skkuhodomo/llama_chat_memory
 #### Install Libraries
 ```
 pip install -t requirements.txt
-
 ```
 #### Run 
 
