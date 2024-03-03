@@ -3,10 +3,11 @@
 ## Sequence
 <center>
 
-![class-diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Skkuhodomo/llama_chat_memory/main/sequence.puml) 
-
+![class-diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Skkuhodomo/llama_chat_memory/main/diagram/sequence.puml) 
 </center>
 
+## Update Plan (with user authentication)
+![class-diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Skkuhodomo/llama_chat_memory/main/diagram/context.puml) 
 
 
 ## To Get Started 
