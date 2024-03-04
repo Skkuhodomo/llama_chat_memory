@@ -9,7 +9,9 @@ end box
 box LLM #LightGreen
 participant "API" 
 end box
-
+box DB 
+participant "DB"
+end box
 
 loop CHAT
 autonumber
@@ -26,5 +28,19 @@ Web --> User : Display message
 deactivate Web
 end
 
+group Save User private pine-tunned Ollama
 
+autonumber
+activate User
+User -> Web : Type Prompt
+Web -> DB   : Save the prompt
+end 
+group Call pine-tunned Ollama
+autonumber
+activate User
+User -> Web : Request ( tunnned Ollam Id )
+Web -> DB   : Get the prompt
+DB --> Web   : Return the prompt
+Web --> User : Response 
+end 
 @enduml
