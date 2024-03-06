@@ -8,15 +8,15 @@ Entity user {
     updated_at : TIMESTAMP
 }
 
-Entity chat{ 
+Entity tunned_Ollama{ 
     chat_id : INT (PK) 
-    chat_context : VARCHAR
+    prompt : VARCHAR
     created_at : TIMESTAMP
     updated_at : TIMESTAMP
     user_id : INT (FK)
 } 
 
-user ||--o{ chat : Creates
+user ||--o{ tunned_Ollama : Creates
 
 
 
