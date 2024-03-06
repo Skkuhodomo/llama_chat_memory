@@ -1,0 +1,29 @@
+@startuml DB context
+
+rectangle "User" {
+    [message]
+}
+
+package "Streamlit" #LightPink {
+    prompt-[WEB]
+}
+rectangle "Ollama"{
+    [API]
+}
+
+database "DB" {
+    [chat_context]
+    [user_id]
+    [chat_id]
+}
+
+
+message --> WEB : send message with userId
+WEB --> DB : get context by userId 
+DB --> API 
+WEB --> API : send message
+API --> DB 
+
+
+
+@enduml

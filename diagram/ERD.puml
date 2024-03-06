@@ -1,0 +1,23 @@
+@startuml ERD
+Entity user {
+    user_id : INT (PK)
+    user_name : VARCHAR
+    email : VARCHAR
+    password : VARCHAR
+    created_at : TIMESTAMP
+    updated_at : TIMESTAMP
+}
+
+Entity chat{ 
+    chat_id : INT (PK) 
+    chat_context : VARCHAR
+    created_at : TIMESTAMP
+    updated_at : TIMESTAMP
+    user_id : INT (FK)
+} 
+
+user ||--o{ chat : Creates
+
+
+
+@enduml 

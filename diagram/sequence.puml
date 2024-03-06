@@ -1,0 +1,46 @@
+@startuml llama
+box #LightBlue
+actor "User" #White
+end box
+
+box Streamlit #LightYellow
+participant "Web" #Yellow
+end box
+box LLM #LightGreen
+participant "API" 
+end box
+box DB 
+participant "DB"
+end box
+
+loop CHAT
+autonumber
+activate User 
+User -> Web : Type message
+activate Web 
+Web -> API : Send message with context
+activate API 
+API -> API : Generate message
+API --> Web : Return message
+deactivate API
+Web -> Web : Store message in session(context)
+Web --> User : Display message
+deactivate Web
+end
+
+group Save User private pine-tunned Ollama
+
+autonumber
+activate User
+User -> Web : Type Prompt
+Web -> DB   : Save the prompt
+end 
+group Call pine-tunned Ollama
+autonumber
+activate User
+User -> Web : Request ( tunnned Ollam Id )
+Web -> DB   : Get the prompt
+DB --> Web   : Return the prompt
+Web --> User : Response 
+end 
+@enduml
